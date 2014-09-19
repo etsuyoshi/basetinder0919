@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DD050A6D-3F76-48EF-AFC9-7B4C24A9D553</string>
+	<key>IDESourceControlProjectName</key>
+	<string>basetinder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2A58837FB406D3F3638BADE82A788856F5E4DA84</key>
+		<string>github.com:etsuyoshi/basetinder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>basetinder.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2A58837FB406D3F3638BADE82A788856F5E4DA84</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:etsuyoshi/basetinder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2A58837FB406D3F3638BADE82A788856F5E4DA84</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2A58837FB406D3F3638BADE82A788856F5E4DA84</string>
+			<key>IDESourceControlWCCName</key>
+			<string>basetinder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
