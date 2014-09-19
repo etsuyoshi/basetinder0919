@@ -13,6 +13,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ItemData.h"
+#import <UICKeyChainStore/UICKeyChainStore.h>
+#import "LearningViewController.h"
 
 @interface ViewController ()
 @property (strong, readwrite, nonatomic) REMenu *topMenu;
@@ -94,9 +96,12 @@
                                 @"bag",
                                 @"wallet",
                                 @"desk",
-                                @"white",
-                                @"black",
                                 @"food",
+                       @"white",
+                       @"black",
+                       @"drink",
+                       @"animal",
+                       @"shimashima",
                                 nil];
     arrHibitaImageUrl = [NSMutableArray array];
     arrHibitaCategories = [NSMutableArray array];
@@ -116,7 +121,12 @@
      action:@selector(toggleTotalMenu)];
     
     
-    
+    self.navigationItem.rightBarButtonItem=
+    [[UIBarButtonItem alloc]
+     initWithTitle:@"update"
+     style:UIBarButtonItemStyleDone
+     target:self
+     action:@selector(update)];
     
     
     
@@ -284,6 +294,8 @@
      action:^(REMenuItem *item) {
          NSLog(@"Item: %@", item);
          
+         
+         [self dataToDevice];
          //ファンページへ遷移
 //         ETFanViewController *fanVC = [[ETFanViewController alloc]init];
 //         [self.navigationController pushViewController:fanVC animated:YES];
@@ -300,6 +312,9 @@
      action:^(REMenuItem *item) {
          NSLog(@"Item: %@", item);
          
+         
+         [self dataToDevice];
+         
          FavoriteViewController *favoriteVC = [[FavoriteViewController alloc]init];
          [self.navigationController pushViewController:favoriteVC animated:YES];
      }];
@@ -314,9 +329,14 @@
          NSLog(@"Item: %@", item);
          
          
+         [self dataToDevice];
          //設定アイテムを
          //         [self toggleSettingMenu];
          
+         LearningViewController *vc = [[LearningViewController alloc]init];
+         vc.array = arrSavedItem;
+         vc.arrayCategories =arrayCategories;
+         [self.navigationController pushViewController:vc animated:NO];
          
      }];
     
@@ -335,5 +355,57 @@
     [self.topMenu showFromNavigationController:self.navigationController];
 }
 
+
+-(void)dataToDevice{
+//    ItemDataをデバイスに保存
+    
+    
+    UICKeyChainStore *store = [UICKeyChainStore keyChainStoreWithService:@"basetinder"];
+    
+    NSLog(@"arr = %@", arrSavedItem);
+    
+    NSArray *array = [NSArray arrayWithObjects:@"aaa", @"bbbb", @"ccc", nil];
+    // NSDataオブジェクトへ変換(エンコード)
+//    NSData *dataInput = [NSKeyedArchiver archivedDataWithRootObject:arrSavedItem];
+//    NSData *dataInput = [NSKeyedArchiver archivedDataWithRootObject:(NSObject *)arrSavedItem];
+//    NSData *dataInput = [NSKeyedArchiver archivedDataWithRootObject:(NSArray *)arrSavedItem];
+    NSData *dataInput = [NSKeyedArchiver archivedDataWithRootObject:array];
+    //格納
+    [store setData:dataInput forKey:@"arrSavedItem"];
+    [store synchronize];
+    
+    
+    
+    store = nil;
+    dataInput = nil;
+    
+    
+    
+//    UICKeyChainStore *store = [UICKeyChainStore keyChainStoreWithService:strService];
+//    
+//    
+//    // NSDataオブジェクトへ変換(エンコード)
+//    NSData *dataInput = [NSKeyedArchiver archivedDataWithRootObject:arrayInput];
+//    
+//    //格納
+//    [store setData:dataInput forKey:strKey];
+    
+    
+    
+    
+    //出たを取得するとき
+//    UICKeyChainStore *store = [UICKeyChainStore keyChainStoreWithService:strService];
+//    
+//    NSData *dataReturn = [store dataForKey:strKey];
+    
+}
+
+-(void)update{
+    NSLog(@"update");
+    
+    [SVProgressHUD showWithStatus:@"更新中"];
+//    [self setSwipeImage];
+    [self setData:0];
+}
 
 @end

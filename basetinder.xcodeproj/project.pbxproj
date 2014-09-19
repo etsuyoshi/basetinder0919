@@ -21,6 +21,7 @@
 		2A76B0B919C80A150037A7D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A76B0B819C80A150037A7D7 /* Images.xcassets */; };
 		2A76B0BC19C80A150037A7D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A76B0BA19C80A150037A7D7 /* LaunchScreen.xib */; };
 		2A76B0C819C80A150037A7D7 /* basetinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A76B0C719C80A150037A7D7 /* basetinderTests.m */; };
+		2A90B1B919CC0B6500B3850A /* LearningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A90B1B819CC0B6500B3850A /* LearningViewController.m */; };
 		2AA52A1619CB5C3700C886C7 /* ETBuyerAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA52A1419CB5C3700C886C7 /* ETBuyerAPIClient.m */; };
 		2AA52A1919CB5C9000C886C7 /* CommonAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA52A1819CB5C9000C886C7 /* CommonAPI.m */; };
 		2AA52A1C19CB5CB700C886C7 /* ETDefaultInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA52A1B19CB5CB700C886C7 /* ETDefaultInfo.m */; };
@@ -63,6 +64,8 @@
 		2A76B0C119C80A150037A7D7 /* basetinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = basetinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A76B0C619C80A150037A7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A76B0C719C80A150037A7D7 /* basetinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = basetinderTests.m; sourceTree = "<group>"; };
+		2A90B1B719CC0B6500B3850A /* LearningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningViewController.h; sourceTree = "<group>"; };
+		2A90B1B819CC0B6500B3850A /* LearningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningViewController.m; sourceTree = "<group>"; };
 		2AA52A1419CB5C3700C886C7 /* ETBuyerAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETBuyerAPIClient.m; sourceTree = "<group>"; };
 		2AA52A1519CB5C3700C886C7 /* ETBuyerAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETBuyerAPIClient.h; sourceTree = "<group>"; };
 		2AA52A1719CB5C9000C886C7 /* CommonAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAPI.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				2A07F86719CBE94A0097F2E2 /* HonbanViewController.m */,
 				2A07F86919CBF9450097F2E2 /* FavoriteViewController.h */,
 				2A07F86A19CBF9450097F2E2 /* FavoriteViewController.m */,
+				2A90B1B719CC0B6500B3850A /* LearningViewController.h */,
+				2A90B1B819CC0B6500B3850A /* LearningViewController.m */,
 				2A76B0B519C80A150037A7D7 /* Main.storyboard */,
 				2A76B0B819C80A150037A7D7 /* Images.xcassets */,
 				2A76B0BA19C80A150037A7D7 /* LaunchScreen.xib */,
@@ -330,6 +335,7 @@
 				2A76B0B419C80A150037A7D7 /* ViewController.m in Sources */,
 				2A07F86F19CBFA7C0097F2E2 /* ETCollectionViewCell.m in Sources */,
 				2A07F87319CC04300097F2E2 /* ItemData.m in Sources */,
+				2A90B1B919CC0B6500B3850A /* LearningViewController.m in Sources */,
 				2AA52A1919CB5C9000C886C7 /* CommonAPI.m in Sources */,
 				2A07F86819CBE94A0097F2E2 /* HonbanViewController.m in Sources */,
 				2AA52A1619CB5C3700C886C7 /* ETBuyerAPIClient.m in Sources */,
