@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HonbanViewController.h"
+#import <MDCSwipeToChoose/MDCSwipeToChoose.h>
+#import "REMenu.h"
+#import "FavoriteViewController.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController<MDCSwipeToChooseDelegate>
+@property (strong, readonly, nonatomic) REMenu *topMenu;
 
 @end
 
